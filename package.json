@@ -1,0 +1,23 @@
+{
+  "name": "odin-testing-practice",
+  "version": "1.0.0",
+  "description": "odin17. This is some practice using Jest to write unit tests on some basic functions.",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jor-eldevera/odin-testing-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jor-eldevera/odin-testing-practice/issues"
+  },
+  "homepage": "https://github.com/jor-eldevera/odin-testing-practice#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
