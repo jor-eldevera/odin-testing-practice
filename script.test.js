@@ -96,7 +96,7 @@ test("calculator: subtract with no parameters", () => {
 
 // Multiply
 test("calculator: multiply two numbers", () => {
-    expect(calculator.add(3, 6)).toBe(18);
+    expect(calculator.multiply(3, 6)).toBe(18);
 });
 
 test("calculator: multiply two decimals", () => {
@@ -149,7 +149,7 @@ test("caesarCipher: one word", () => {
 });
 
 test("caesarCipher: shift factor above 1", () => {
-    expect(caesarCipher("abcd", 3)).toBe("cdef");
+    expect(caesarCipher("abcd", 3)).toBe("defg");
 });
 
 test("caesarCipher: multiple words", () => {
@@ -214,8 +214,8 @@ test("analyzeArray: 1 element array length", () => {
     expect(analyzeArray([1]).length).toBe(1);
 });
 
-test("analyzeArray: array with non-number in it", () => {
-    expect(() => analyzeArray([4, "test", 5])).toThrow();
+test("analyzeArray: average of an array with non-number in it", () => {
+    expect(analyzeArray([4, "test", 5]).average).toBe(4.5);
 });
 
 test("analyzeArray: average of array with number-string in it", () => {
@@ -235,5 +235,5 @@ test("analyzeArray: length of array with number-string in it", () => {
 });
 
 test("analyzeArray: non-array input", () => {
-    expect(() => analyzeArray(4)).toThrow();
+    expect(analyzeArray(4)).toBeNull();
 });
