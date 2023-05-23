@@ -53,10 +53,57 @@ function caesarCipher(string, shift) {
 }
 
 function analyzeArray(array) {
+    if (!Array.isArray(array)) return null;
+    if (array[0] === undefined) return null;
+
+    array = processArray(array);
     let average = findAverage(array);
     let min = findMin(array);
     let max = findMax(array);
     let length = array.length;
+
+    return {
+        average: average,
+        min: min,
+        max: max,
+        length: length
+    }
+}
+
+function processArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        // if (isNaN(parseInt(array[i]))) throw new Error("processArray: non number passed in array");
+        array[i] = parseInt(array[i]);
+    }
+    return array.filter(item => !isNaN(item));
+}
+
+function findAverage(array) {
+    let total = 0;
+    array.forEach(num => {
+        total += num;
+    });
+    return total / array.length;
+}
+
+function findMin(array) {
+    let min = array[0];
+    array.forEach(num => {
+        if (num < min) {
+            min = num;
+        }
+    });
+    return min;
+}
+
+function findMax(array) {
+    let max = 0;
+    array.forEach(num => {
+        if (num > max) {
+            max = num;
+        }
+    });
+    return max;
 }
 
 module.exports = {
