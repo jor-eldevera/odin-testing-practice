@@ -17,11 +17,11 @@ it("capitalize: capitalize a string with multiple words", () => {
 });
 
 it("capitalize: throw error on empty string", () => {
-    expect(capitalize("")).toThrow();
+    expect(() => capitalize("")).toThrow();
 });
 
 it("capitalize: throw error on non string input", () => {
-    expect(capitalize(4)).toThrow();
+    expect(() => capitalize(4)).toThrow();
 });
 
 /*
@@ -29,23 +29,23 @@ it("capitalize: throw error on non string input", () => {
  */
 
 it("reverseString: reverse one word", () => {
-    expect(capitalize("lorem")).toBe("merol");
+    expect(reverseString("lorem")).toBe("merol");
 });
 
 it("reverseString: reverse one character", () => {
-    expect(capitalize("m")).toBe("m");
+    expect(reverseString("m")).toBe("m");
 });
 
 it("reverseString: reverse multiple words", () => {
-    expect(capitalize("lorem ipsum")).toBe("muspi merol");
+    expect(reverseString("lorem ipsum")).toBe("muspi merol");
 });
 
 it("reverseString: throw error on empty string", () => {
-    expect(reverseString("")).toThrow();
+    expect(() => reverseString("")).toThrow();
 });
 
 it("reverseString: throw error on non string input", () => {
-    expect(reverseString(4)).toThrow();
+    expect(() => reverseString(4)).toThrow();
 });
 
 /*
@@ -66,11 +66,11 @@ it("calculator: add two string numbers", () => {
 });
 
 it("calculator: add with one parameter", () => {
-    expect(calculator.add(4)).toThrow();
+    expect(() => calculator.add(4)).toThrow();
 });
 
 it("calculator: add with no parameters", () => {
-    expect(calculator.add()).toThrow();
+    expect(() => calculator.add()).toThrow();
 });
 
 // Subtract
@@ -87,11 +87,11 @@ test("calculator: subtract two string numbers", () => {
 });
 
 test("calculator: subtract with one parameter", () => {
-    expect(calculator.subtract(4)).toThrow();
+    expect(() => calculator.subtract(4)).toThrow();
 });
 
 test("calculator: subtract with no parameters", () => {
-    expect(calculator.subtract()).toThrow();
+    expect(() => calculator.subtract()).toThrow();
 });
 
 // Multiply
@@ -108,11 +108,11 @@ test("calculator: multiply two string numbers", () => {
 });
 
 test("calculator: multiply with one parameter", () => {
-    expect(calculator.multiply(4)).toThrow();
+    expect(() => calculator.multiply(4)).toThrow();
 });
 
 test("calculator: multiply with no parameters", () => {
-    expect(calculator.multiply()).toThrow();
+    expect(() => calculator.multiply()).toThrow();
 });
 
 // Divide
@@ -133,11 +133,11 @@ test("calculator: divide two string numbers", () => {
 });
 
 test("calculator: divide with one parameter", () => {
-    expect(calculator.divide(4)).toThrow();
+    expect(() => calculator.divide(4)).toThrow();
 });
 
 test("calculator: add with no parameters", () => {
-    expect(calculator.divide()).toThrow();
+    expect(() => calculator.divide()).toThrow();
 });
 
 /*
@@ -215,7 +215,7 @@ test("analyzeArray: 1 element array length", () => {
 });
 
 test("analyzeArray: array with non-number in it", () => {
-    expect(analyzeArray([4, "test", 5])).toThrow();
+    expect(() => analyzeArray([4, "test", 5])).toThrow();
 });
 
 test("analyzeArray: average of array with number-string in it", () => {
@@ -235,5 +235,5 @@ test("analyzeArray: length of array with number-string in it", () => {
 });
 
 test("analyzeArray: non-array input", () => {
-    expect(analyzeArray(4)).toThrow();
+    expect(() => analyzeArray(4)).toThrow();
 });
