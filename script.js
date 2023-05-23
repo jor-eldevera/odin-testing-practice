@@ -35,12 +35,28 @@ let calculator = {
     },
 };
 
-function caesarCipher(string) {
-    
+function caesarCipher(string, shift) {
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+        let code = string.charCodeAt(i);
+        if ((code >= 65 && code <= 89) || (code >= 97 && code <= 121)) {
+            newString += String.fromCharCode(string.charCodeAt(i) + shift);
+        } else if (code === 90) {
+            newString += "A";
+        } else if (code === 122) {
+            newString += "a";
+        } else {
+            newString += string.charAt(i);
+        }
+    }
+    return newString;
 }
 
 function analyzeArray(array) {
-    
+    let average = findAverage(array);
+    let min = findMin(array);
+    let max = findMax(array);
+    let length = array.length;
 }
 
 module.exports = {
